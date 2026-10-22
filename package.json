@@ -1,0 +1,52 @@
+{
+  "name": "@voidrift/plugin-bedrock",
+  "version": "0.1.0",
+  "description": "VoidRift Bedrock — the first-party model provider over AWS Bedrock (ChatBedrockConverse).",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest --run"
+  },
+  "dependencies": {
+    "@aws-sdk/credential-provider-node": "3.972.85",
+    "@langchain/aws": "1.4.6"
+  },
+  "peerDependencies": {
+    "@langchain/core": "*",
+    "@voidrift/core": "^0.1.0"
+  },
+  "devDependencies": {
+    "@langchain/core": "*",
+    "@types/node": "26.6.5",
+    "@voidrift/core": "^0.1.0",
+    "typescript": "5.9.3",
+    "vitest": "5.0.3"
+  },
+  "voidrift": {
+    "kind": "plugin",
+    "plugin": true,
+    "description": "The `bedrock` model protocol over @langchain/aws ChatBedrockConverse (model-providers-blueprint §3)."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerJPresley/voidrift-plugin-bedrock.git"
+  }
+}
