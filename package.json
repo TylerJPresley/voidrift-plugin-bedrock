@@ -23,7 +23,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "lint": "eslint src"
   },
   "dependencies": {
     "@aws-sdk/credential-provider-node": "3.972.85",
@@ -38,7 +39,10 @@
     "@types/node": "26.6.5",
     "@voidrift/core": "^0.1.0",
     "typescript": "5.9.3",
-    "vitest": "5.0.3"
+    "vitest": "5.0.3",
+    "eslint": "10.12.0",
+    "eslint-config-prettier": "10.1.8",
+    "typescript-eslint": "8.71.1"
   },
   "voidrift": {
     "kind": "plugin",
@@ -48,5 +52,19 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TylerJPresley/voidrift-plugin-bedrock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TylerJPresley/voidrift-plugin-bedrock/issues"
+  },
+  "homepage": "https://github.com/TylerJPresley/voidrift-plugin-bedrock#readme",
+  "keywords": [
+    "voidrift",
+    "bedrock",
+    "first",
+    "party",
+    "model"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
